@@ -1,0 +1,26 @@
+$height_badge: 1.3rem;
+$width_badge: 1.4rem;
+
+.m-badge {
+  top:0;
+  right:0;
+  color:white;
+  position: relative;
+  text-align: center;
+  font-size:$font-size-smxx;
+  height:$height_badge;
+  width:$width_badge;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include bg-image('onemt_badge.png',contain, center);
+  .m-badge-number {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+}

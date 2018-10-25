@@ -1,0 +1,15 @@
+.html-box {
+  word-wrap: break-word;
+  word-break: break-all;
+  //修改link颜色
+  .html-box_link {
+    color: lightsteelblue;
+  }
+  //table默认占满
+  table {
+    width: 100%;
+  }
+  img {
+    max-width: 100%;
+  }
+}

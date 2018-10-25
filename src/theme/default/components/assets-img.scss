@@ -1,0 +1,114 @@
+$size_avatar-xs: 1rem;
+$size_avatar-sm: dp(60);
+$size_avatar-md: dp(100);
+$size_avatar-lg: dp(160);
+
+.assets-img {
+  //预设头像（包含头像背景预设）
+  &.message {
+    background-image: assets('onemt_message_icon.png');
+  }
+  &.question {
+    background-image: assets('onemt_pending_question_icon.png');
+  }
+  &.no-message {
+    background-image: assets('onemt_no_message.png');
+  }
+  &.no-following {
+    background-image: assets('onemt_no_following.png');
+  }
+  &.no-content {
+    background-image: assets('onemt_no_content.png');
+  }
+  &.no-notice {
+    background-image: assets('onemt_no_notice.png');
+  }
+  &.no-post {
+    background-image: assets('onemt_no_post.png');
+  }
+  &.no-face {
+    background-image: assets('onemt_no_face.png');
+  }
+  &.no-favorite {
+    background-image: assets('onemt_no_favorite.png');
+  }
+  
+  &.search {
+    background-image: assets('onemt_icon_search.png');
+  }
+  &.edit {
+    background-image: assets('onemt_icon_edit.png');
+  }
+  &.contact-GM {
+    background-image: assets('onemt_contact_GM.png');
+  }
+  &.camera {
+    background-image: assets('onemt_choose_image.png');
+  }
+  &.preview {
+    background-image: assets('onemt_choose_image.png');
+  }
+  &.muji-good {
+    background-image: assets('onemt_muji_good.png');
+  }
+  &.muji-soso {
+    background-image: assets('onemt_muji_soso.png');
+  }
+  &.muji-bad {
+    background-image: assets('onemt_muji_bad.png');
+  }
+  &.icon-comment {
+    background-image: assets('onemt_comment.png');
+  }
+  &.clear {
+    background-image: assets('onemt_icon_clear.png');
+  }
+  &.ratio {
+    background-image: assets('onemt_radio.png');
+  }
+  &.ratio-active {
+    background-image: assets('onemt_radio_active.png');
+  }
+  &.issue {
+    background-image: assets('onemt_my_issue_icon.png');
+  }
+  &.icon-check {
+    background-image: assets('onemt_check.png');
+  }
+  &.arrow-drop {
+    background-image: assets('onemt_arrow_drop.png');
+  }
+  &.icon-setTop {
+    background-image: assets('onemt_tag_top.png');
+  }
+  //人物头像背景
+  &.man {
+    background-image: assets('onemt_avatar_default.png');
+  }
+
+
+}
+
+.assets-img {
+  @include button-image(
+      $size-header,
+      $size-header * $ratio-button-image
+  );
+
+  &.xs {
+    height: $size_avatar-xs;
+    width: $size_avatar-xs;
+  }
+  &.sm {
+    height: $size_avatar-sm;
+    width: $size_avatar-sm;
+  }
+  &.md {
+    height: $size_avatar-md;
+    width: $size_avatar-md;
+  }
+  &.lg {
+    height: $size_avatar-lg;
+    width: $size_avatar-lg;
+  }
+}

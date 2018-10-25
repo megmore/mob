@@ -1,0 +1,19 @@
+
+
+$size_loading:  dp(100);
+.m-loading {
+  @include modal(loading);
+    .m-loading--main {
+      background-color: transparent;
+      width: $size_loading;
+      height: $size_loading;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .fa-icon {
+        color:white
+      }
+    }
+}
+
+

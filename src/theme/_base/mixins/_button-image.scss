@@ -1,0 +1,59 @@
+@mixin button-image(
+  $height: false,
+  $width: false,
+  $url: false,
+  $url-active: false,
+  $bg-size: 100% 100%,
+  $url-complete: false
+) {
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $bg-size;
+  @if ($height && $width) {
+    height:  $height;
+    width:   $width;
+  }
+
+  position: relative;
+  //@if $url-active {
+  //  background-image: url('#{$assetsPath}#{$url-active}');
+  //}
+  background-image: none;
+  &:after {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: $bg-size;
+    @if $url {
+      background-image: url('#{$assetsPath}#{$url}');
+    }
+
+    height:  inherit;
+    width:   inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: .3s all ease;
+    content: ' ';
+  }
+  &:active,
+  &.active {
+    @if $url-active {
+      background-image: url('#{$assetsPath}#{$url-active}');
+    }
+    &:after {
+      opacity: 0;
+    }
+  }
+  @if $url-complete {
+    &.complete {
+      background-image: url('#{$assetsPath}#{$url-complete}');
+      &:after {
+        opacity: 0;
+      }
+    }
+
+  }
+
+}

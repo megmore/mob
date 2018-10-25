@@ -1,0 +1,58 @@
+$size_scroller-menu: 3.5rem;
+.scroller-menu {
+  height: $size_scroller-menu;
+  width: 100vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  will-change: scroll-position;
+  contain: size style layout;
+  @include no-scrollbar();
+  position: relative;
+  background-color: $color-primary;
+  .scroller-menu--wrapper {
+    position: absolute;
+    height: inherit;
+    display: flex;
+    @include no-scrollbar();
+    background-color: $color-primary;
+    > * {
+      background-color: inherit;
+      height: inherit;
+      color: white;
+      font-size: $font-size-md;
+      line-height: $size_scroller-menu;
+      padding: 0 .8rem;
+      position: relative;
+      transition: font-weight .3s ease;
+
+      word-break: keep-all;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      span{
+        line-height: 1 !important;
+        white-space: nowrap;
+        color: inherit;
+      }
+
+      &.active {
+        color:$color-youngboy;
+        font-weight: bold;
+
+        &:after {
+          content: ' ';
+          display: block;
+          background: $color-youngboy;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 0.1rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

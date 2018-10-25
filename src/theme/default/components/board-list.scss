@@ -1,0 +1,34 @@
+.board-list {
+    @include list-item();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-main {
+        &--title {
+            font-size: $font-size-mdx;
+        }
+        &--posts {
+            margin-top: .5rem;
+            color:$color-akima;
+            font-size: $font-size-smxxx;
+        }
+    }
+    &-extra {
+        &--unread {
+            color: $color-danger;
+            font-size: $font-size-mdx;
+        }
+        &--follow {
+            height: 2rem;
+            width: 2rem;
+        }
+        &--follow-temp {
+            height: 2rem;
+            width: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $color-akima
+        }
+    }
+}

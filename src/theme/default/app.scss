@@ -1,0 +1,8 @@
+body {
+    &:before {
+        background-color: $color-primary;
+    }
+    &.is-iphoneX {
+        padding-top: $size-fix-hair;
+    }
+}

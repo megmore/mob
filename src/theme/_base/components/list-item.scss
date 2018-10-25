@@ -1,0 +1,116 @@
+
+$transition_ibutton: opacity  0.1s ease;
+$size_m_list_item: 1rem $space-side;
+$space_m_list_item_inner: dp(24);
+.m-list--item {
+  position: relative;
+  .m-list-body {
+    transition: all 0.3s;
+    font-size: .9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: $size_m_list_item;
+    word-wrap: break-word;
+    word-break: break-all;
+    &:active {
+      background: $color-sleep;
+    }
+    .cover {
+      @include ltl {
+        margin-right: $space_m_list_item_inner;
+      }
+      @include rtl {
+        margin-left: $space_m_list_item_inner;
+      }
+    }
+    .m-list--main {
+      font-size: $font-size-md;
+      @include ltl {
+        margin-right: $space_m_list_item_inner;
+      }
+      @include rtl {
+        margin-left: $space_m_list_item_inner;
+      }
+      color:$color-dark;
+      flex:1;
+      word-wrap: break-word;
+      word-break: break-all;
+      .content {
+        white-space: normal;
+        word-break: break-all;
+      }
+    }
+
+    .notice {
+      color:$color-akima;
+      &.danger {
+        color: $c-danger;
+        &:before {
+          background-color: $c-danger;
+        }
+      }
+      position: relative;
+      &:before {
+        content: ' ';
+        display:inline-block;
+        margin-right: dp(10);
+        height: dp(20);
+        width: dp(20);
+        border-radius: 50%;
+      }
+    }
+    .notice {
+      @include ltl {
+        margin-right: $space_m_list_item_inner;
+      }
+      @include rtl {
+        margin-left: $space_m_list_item_inner;
+      }
+    }
+    .info {
+      @include ltl {
+        margin-right: $space_m_list_item_inner;
+      }
+      @include rtl {
+        margin-left: $space_m_list_item_inner;
+      }
+
+      color:$color-akima;
+      font-size: .8rem;
+    }
+    .arrow {
+      height: 1.2rem;
+      width: 1.2rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      @include rtl {
+        transform: rotate(180deg);
+      }
+    }
+    .time {
+      margin-top: dp(12);
+      display: block;
+      font-size: .8rem;
+      color: $c-stoneGray;
+    }
+  }
+  .m-list--below{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    @include ltl{
+      transform: translateX(100%);
+      right: 0;
+    }
+    @include rtl{
+      transform: translateX(-100%);
+      left: 0;
+    }
+    >*{
+      height: 100%;
+    }
+  }
+}

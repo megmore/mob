@@ -1,0 +1,30 @@
+@mixin list-item(
+  $border: normal
+) {
+  user-select: none;
+  background-color: white;
+  transition: background ease .2s;
+  min-height: 3rem;
+  position: relative;
+  &:active,
+  &.active {
+    background: $color-sleep;
+  }
+  @if($border == normal) {
+    &:after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      bottom: 0;
+      left:0;
+      height: 0.1rem;
+      @include bg-image(
+          'onemt_divider_list.png',
+          contain
+      )
+    }
+  }
+
+}

@@ -1,0 +1,55 @@
+$base-line-height: 24px;
+$white: rgb(255,255,255);
+$off-white: rgba($white, 0.2);
+$spin-duration: .65s;
+$pulse-duration: 750ms;
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    background: $white;
+  }
+}
+
+@mixin loader-default(
+  $skin: white,
+  $size: 1rem,
+  $borderSize: 0.2rem
+) {
+  height: $size;
+  width: $size;
+  @if($skin == white){
+    border: $borderSize solid rgba(255, 255, 255, 0.2);
+    border-top-color: white;
+  }@else{
+    border: $borderSize solid rgba(54, 54, 54, 0.16);
+    border-top-color: black;
+  }
+}
+
+@mixin loader(
+  $theme: white,
+  $width: $base-line-height,
+  $height: $base-line-height
+){
+  border-radius: 50%;
+  width: $width;
+  height: $height;
+  animation: spin $spin-duration infinite linear;
+  @if($theme == white){
+    border: .2rem solid $off-white;
+    border-top-color: $white;
+  } @else {
+    border: .2rem solid rgba(54, 54, 54, 0.16);
+    border-top-color: black;
+  }
+}
+

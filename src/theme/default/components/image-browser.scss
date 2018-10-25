@@ -1,0 +1,20 @@
+.m-image-browser {
+  @include modal(image-browser, 88);
+  //height: auto !important;
+  //overflow-x: scroll !important;
+  //overflow-y: scroll !important;
+  img.m-image-browser--main {
+    transform-origin: center center;
+    border-radius: 0;
+    width: 100%;
+    left:0;
+    will-change: transform;
+  }
+  @include landscope {
+    img.m-image-browser--main {
+      height: 100%;
+      top:0;
+      width: auto;
+    }
+  }
+}

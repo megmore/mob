@@ -1,0 +1,31 @@
+@mixin button($bg: white, $color: normal){
+  @if($bg == white) {
+    background-color: white;
+    transition: all .2s ease;
+    &:active,
+    &.active {
+      background-color: rgb(223, 223, 223);
+    }
+  }
+  @if($color == normal) {
+    color:  $c-text;
+  }
+  @if($color == danger) {
+    color:  $c-danger;
+  }
+}
+
+@mixin bgButton ($bgColor, $active: darken, $percent: 5%){
+  transition: backgroundColor .2s ease;
+  background-color: $bgColor;
+  &:active,
+  &.active,
+  &:disabled{
+    @if($active == darken) {
+      background-color: darken($bgColor, $percent);
+    }@else{
+      background-color: lighten($bgColor, $percent);
+    }
+
+  }
+}

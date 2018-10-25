@@ -1,0 +1,108 @@
+//杂项
+
+/*--more按钮--*/
+
+
+
+
+/*--矫正样式--*/
+//通用样式
+// space
+@each $break-point-name, $value in $--Space {
+  .pt-#{$break-point-name} {
+    padding-top: $value;
+  }
+  .pb-#{$break-point-name} {
+    padding-bottom: $value;
+  }
+  .pl-#{$break-point-name} {
+    @include ltl {
+      padding-left: $value;
+    }
+    @include rtl {
+      padding-right: $value;
+    }
+  }
+
+  .pr-#{$break-point-name} {
+    @include ltl {
+      padding-right: $value;
+    }
+    @include rtl {
+      padding-left: $value;
+    }
+  }
+  .px-#{$break-point-name} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+  .py-#{$break-point-name} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+  .p-#{$break-point-name} {
+    padding: $value;
+  }
+
+  .m-#{$break-point-name} {
+    margin: $value;
+  }
+  .mt-#{$break-point-name} {
+    margin-top: $value;
+  }
+  .mb-#{$break-point-name} {
+    margin-bottom: $value;
+  }
+  .ml-#{$break-point-name} {
+    @include ltl {
+      margin-left: $value;
+    }
+    @include rtl {
+      margin-right: $value;
+    }
+  }
+  .mr-#{$break-point-name}{
+    @include ltl {
+      margin-right: $value;
+    }
+    @include rtl {
+      margin-left: $value;
+    }
+  }
+
+  .mx-#{$break-point-name} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .my-#{$break-point-name} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+  .m-#{$break-point-name} {
+    margin: $value;
+  }
+}
+
+.flex-main {
+  flex:1
+}
+
+/*--颜色样式--*/
+.color-danger {
+  color: $c-danger !important;
+}
+.color-warning {
+  color: $c-warning !important;
+}
+.color-success {
+  color: $c-success !important;
+}
+.color-primary {
+  color: $color-primary !important;
+}
+.color-info {
+  color: $color-info !important;
+}
+.color-redbone {
+  color: $color-redbone
+}

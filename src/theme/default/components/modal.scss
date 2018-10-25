@@ -1,0 +1,35 @@
+$height_droplist:  dp(50);
+$width_droplist:  dp(160);
+
+$space_droplist:  dp(20);
+$fontSize_droplist: 12px;
+
+.m-modal {
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  background-color: transparent;
+  .m-modal-mask {
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,.8);
+  }
+  .m-modal-main {
+    height: 500px;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left:50%;
+    border-radius: .2rem;
+    background-color: white;
+    transform:translateY(-50%);
+    margin-left: -42.5vw;
+    //transform: translate3d(-50%, -50%, 0);
+    width: 85vw;
+  }
+}

@@ -1,0 +1,11 @@
+@mixin bg-image(
+  $url,
+  $size: cover,
+  $position: center,
+  $repeat: no-repeat
+) {
+  @if ($size) { background-size: $size };
+  background-repeat: #{$repeat};
+  @if ($position) { background-position: $position };
+  background-image: url('#{$assetsPath}#{$url}');
+}

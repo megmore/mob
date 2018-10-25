@@ -1,0 +1,27 @@
+
+@mixin modal($name, $zIndex: 10086) {
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  z-index: $zIndex;
+  background-color: transparent;
+  .m-mask {
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,.8);
+  }
+  .m-#{$name}--main {
+    position: absolute;
+    top: 50%;
+    overflow-x: hidden;
+    left:50%;
+    border-radius: .1rem;
+    background-color: white;
+    transform: translate3d(-50%, -50%, 0);
+    width: 85vw;
+  }
+}

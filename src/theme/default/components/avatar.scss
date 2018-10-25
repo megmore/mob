@@ -1,0 +1,67 @@
+$size_avatar-xs: 1rem;
+$size_avatar-sm: 2.2rem;
+$size_avatar-md: 3.3rem;
+$size_avatar-lg: 4rem;
+$size_avatar-xl: 6rem;
+
+.m-avatar {
+  background-size: 100% 100%;
+  @include bg-image(
+    'onemt_avatar_default.png'
+  );
+  position: relative;
+
+  img {
+    width: inherit !important;
+    height: inherit !important;
+    min-width: inherit !important;
+    min-height: inherit !important;
+    border-radius: inherit !important;
+  }
+  .m-badge {
+    top: -25%;
+    right: -25%;
+    position: absolute;
+  }
+
+  &.round {
+    border-radius: 50%;
+  }
+  &.corner {
+    border-radius: 10%;
+  }
+
+  &.xs {
+    height: $size_avatar-xs;
+    width: $size_avatar-xs;
+    min-width: $size_avatar-xs;
+    min-height: $size_avatar-xs;
+  }
+  &.sm {
+    height: $size_avatar-sm;
+    width: $size_avatar-sm;
+    min-width: $size_avatar-sm;
+    min-height: $size_avatar-sm;
+  }
+  &.md {
+    height: $size_avatar-md;
+    width: $size_avatar-md;
+    min-width: $size_avatar-md;
+    min-height: $size_avatar-md;
+  }
+  &.lg {
+    height: $size_avatar-lg;
+    width: $size_avatar-lg;
+    min-width: $size_avatar-lg;
+    min-height: $size_avatar-lg;
+  }
+  &.xl {
+    height: $size_avatar-xl;
+    width: $size_avatar-xl;
+    min-width: $size_avatar-xl;
+    min-height: $size_avatar-xl;
+  }
+  img {
+    border: none
+  }
+}

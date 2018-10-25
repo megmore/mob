@@ -1,0 +1,8 @@
+.m-label {
+    &.warning {
+        color: $c-warning
+    }
+    &.danger {
+        color: $c-danger
+    }
+}

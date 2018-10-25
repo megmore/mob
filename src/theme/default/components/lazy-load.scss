@@ -1,0 +1,18 @@
+.lazy-load {
+  width: 100%;
+  display: block;
+  &.rending {
+    @include bg-image('onemt_image_holder.png', 10% auto);
+    background-color: #a3a3a3;
+  }
+  &.rendered {
+    background: none;
+    //background-image: none;
+    background-color: transparent;
+  }
+}
+//.lazy-load-rending {
+//  @include bg-image('onemt_image_holder.png', 10% auto);
+//  background-color: #a3a3a3;
+//}
+//

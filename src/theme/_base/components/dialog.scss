@@ -1,0 +1,58 @@
+.m-dialog {
+  $prefix: m-dialog;
+  @include modal(dialog);
+  .#{$prefix}--main {
+    $prefix: #{$prefix}--main;
+    max-width: 90vw;
+    width: 72vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 1.4rem;
+    top:40%;
+    .#{$prefix}-title {
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+    .#{$prefix}-content {
+      padding: .7rem .8rem;
+      font-size :$font-size-md;
+      line-height: 1.4;
+      width: 100%;
+      font-weight: bold;
+    }
+    .#{$prefix}-input {
+      width: 100%;
+      margin: 1rem 0;
+    }
+    .#{$prefix}-handler {
+      $prefix: #{$prefix}-handler;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: center;
+      width:100%;
+      .m-button {
+        flex:1;
+        width:95%;
+        padding: 0;
+        @include ltl{
+          margin-right:.5rem;
+          &:last-child {
+            margin-right:0;
+          }
+        }
+        @include rtl{
+          margin-left:.5rem;
+          &:last-child {
+            margin-left:0;
+          }
+        }
+      }
+    }
+  }
+}
+

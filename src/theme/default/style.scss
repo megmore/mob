@@ -1,0 +1,64 @@
+@import "import";
+// 字体
+@import "~onemt-treasure/fonts/Roboto-Regular.css";
+
+@import "../_base/style";
+//基础样式
+@import "app";
+// 图标库
+//@import "sdk-icon/style";
+// 通用组件样式
+
+// 实例组件
+@import "components/view";
+@import "components/header";
+@import "components/footer";
+@import "components/button";
+@import "components/button-group";
+@import "components/utils";
+@import "components/avatar";
+@import "components/card";
+@import "components/input";
+@import "components/list-item";
+@import "components/modal";
+@import "components/operation";
+@import "components/action-sheet";
+@import "components/action-sheet-item";
+@import "components/tab";
+@import "components/scroller";
+@import "components/vote";
+//@import "components/message-prompt";
+@import "components/toastr";
+@import "components/confirm";
+@import "components/image-browser";
+@import "components/image-selector";
+@import "components/label";
+@import "components/popover";
+
+@import "components/transition";
+@import "components/html-box";
+@import "components/chat-room";
+@import "components/chats-box";
+@import "components/blockquto";
+@import "components/share";
+@import "components/loading";
+@import "components/dialog";
+@import "components/image";
+@import "components/loader";
+@import "components/badge";
+@import "components/scroller-menu";
+
+@import "components/guide";
+@import "components/assets-img";
+@import "components/error-block";
+@import "components/tag";
+@import "components/title";
+@import "components/icon";
+//样式组件
+@import "components/divider";
+@import "components/comment";
+@import "components/message-list";
+@import "components/board-list";
+@import "components/form-preview-item";
+//指令
+//@import "components/lazy-load";

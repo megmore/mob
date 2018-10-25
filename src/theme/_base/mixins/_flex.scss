@@ -1,0 +1,5 @@
+@mixin flex($space: 1) {
+  flex-grow: $space;
+  flex-shrink: 1;
+  flex-basis: auto;
+}

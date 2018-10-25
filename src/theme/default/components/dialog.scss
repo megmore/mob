@@ -1,0 +1,16 @@
+.m-dialog {
+  $prefix: m-dialog;
+  @include modal(dialog);
+
+  .#{$prefix}--main {
+    $prefix: #{$prefix}--main;
+    background: white;
+    .#{$prefix}-content {
+      background-color: $color-bomula;
+    }
+    .#{$prefix}-input {
+      background-color: white;
+    }
+  }
+}
+

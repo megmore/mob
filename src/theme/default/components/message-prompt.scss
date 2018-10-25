@@ -1,0 +1,36 @@
+$height_prompt_btn : dp(60);
+$width_prompt_btn : dp(200);
+.message-prompt {
+  .m-prompt-list {
+    height: dp(300);
+    padding: $space-side;
+    .m-prompt-list-item {
+      font-size: .9rem;
+      line-height: 1.2;
+      padding: dp(10) dp(50);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .m-prompt-list-item-content {
+        padding: 0 dp(10);
+        flex:1
+      }
+    }
+  }
+  $size_m_promt_logo:  dp(100);
+  .m-prompt-logo {
+    width: auto;
+    height: $size_m_promt_logo;
+    margin: 0 auto;
+  }
+  .m-prompt-message {
+    font-size: .9rem;
+    color: $c-handler;
+    line-height: 1.8;
+  }
+  .m-button.account1 {
+    height:$height_prompt_btn;
+    width: $width_prompt_btn;
+  }
+}

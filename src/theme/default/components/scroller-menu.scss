@@ -1,0 +1,15 @@
+.scroller-menu {
+  background-color: $color-primary;
+  .scroller-menu--wrapper {
+    background-color: $color-primary;
+    > * {
+      background-color: inherit;
+      &.active {
+        color:$color-youngboy;
+        &:after {
+          background: $color-youngboy;
+        }
+      }
+    }
+  }
+}

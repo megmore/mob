@@ -1,0 +1,10 @@
+// 纯样式hr组件
+.m-divider {
+    width: 100%;
+    &.card {
+        @extend %m-divider--card
+    }
+    &.night {
+        @extend %m-divider--night
+    }
+}

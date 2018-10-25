@@ -1,0 +1,44 @@
+//头部导航组建
+.m-header {
+  position: relative;
+  z-index: 101;
+  width: 100%;
+  background-color: $--color-primary;
+  color: white;
+  box-shadow: $--shadow-primary;
+  .m-header__wrapper {
+    position: relative;
+    height: $--size-header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .m-header-left,
+  .m-header-right {
+    min-width: $--size-header;
+  }
+  .m-header-main {
+    height: inherit;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .header-title {
+      width: inherit;
+      color: $color-dust;
+      font-size: $font-size-mdxx;
+      @include ellipsis(1)
+    }
+    .header-subtitle {
+      width: inherit;
+      color: $color-dust;
+      font-size: $font-size-mdxx;
+      @include ellipsis(1)
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@mixin theme($theme: default){
+  @at-root [data-theme="#{$theme}"] &{
+    @content
+  }
+}
+

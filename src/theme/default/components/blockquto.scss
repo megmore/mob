@@ -1,0 +1,9 @@
+.m-blockquto {
+  width: 100%;
+  padding: dp(20);
+  background-color: rgba(203, 203, 203, 0.54);
+  box-shadow: 0 0 1px 0  rgba(203, 203, 203, 0.54);
+  border-radius: dp(8);
+  margin: dp(10) 0;
+  @include ellipsis(1)
+}

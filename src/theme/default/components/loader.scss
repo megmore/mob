@@ -1,0 +1,41 @@
+
+/*css加载器样式*/
+
+$base-line-height: 24px;
+$white: rgb(255,255,255);
+$off-white: rgba($white, 0.2);
+$spin-duration: .65s;
+$pulse-duration: 750ms;
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    background: $white;
+  }
+}
+
+.m-loader {
+  border-radius: 50%;
+  width: $base-line-height;
+  height: $base-line-height;
+  border: .2rem solid $off-white;
+  border-top-color: $white;
+  animation: spin $spin-duration infinite linear;
+  //皮肤
+  &.dark {
+    border: .2rem solid rgba(54, 54, 54, 0.16);
+    border-top-color: black;
+  }
+
+  //尺寸
+
+
+}

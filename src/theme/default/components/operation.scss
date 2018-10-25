@@ -1,0 +1,66 @@
+
+$size-operetion: 1.9rem;
+
+.m-operation {
+  display: inline-flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: $size-operetion;
+  user-select: none;
+  // 元素
+  .m-operation--icon {
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: $size-operetion;
+    width: $size-operetion;
+    position: relative;
+  }
+  .m-operation--count {
+    width: 3rem;
+    font-size: $font-size-smxxx;
+    margin: 0 .35em;
+  }
+
+  // 类型
+  &.like {
+    .m-operation--icon {
+      background-color: $color-younglady;
+      @include button-image(
+          $size-operetion,
+          $size-operetion,
+          'onemt_icon_like.png',
+          'onemt_icon_like_active.png'
+      );
+    }
+  }
+  &.comment {
+    .m-operation--icon {
+      background-color: $color-youngboy;
+      @include button-image(
+          $size-operetion,
+          $size-operetion,
+          'onemt_icon_comment.png',
+          'onemt_icon_comment_active.png'
+      );
+    }
+  }
+  &.share {
+    .m-operation--icon {
+      background-color: $color-spring;
+      @include button-image(
+          $size-operetion,
+          $size-operetion,
+          'onemt_icon_share.png',
+          'onemt_icon_share_active.png'
+      );
+    }
+  }
+
+}
+
+
+

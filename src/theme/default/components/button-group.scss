@@ -1,0 +1,17 @@
+.m-button-group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  .m-button {
+    //border-radius: 0;
+    @include flex(1);
+    //&:first-child {
+    //border-radius: dp(8)  0 0 dp(8)
+    //}
+    //&:last-child {
+    //  border-radius: 0 dp(8)  dp(8) 0
+    //}
+  }
+}

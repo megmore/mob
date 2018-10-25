@@ -1,0 +1,54 @@
+.message-list {
+  padding:dp(50) $space-side dp(20) $space-side;
+  position: relative;
+  @include list-item();
+  .cover {
+    @include ltl {
+      margin-right: dp(20);
+    }
+    @include rtl {
+      margin-left: dp(20);
+    }
+  }
+  $size_message_thumbs: dp(90);
+  .thumbs {
+    @include ltl {
+      margin-left: dp(20);
+    }
+    @include rtl {
+      margin-right: dp(20);
+    }
+    height: $size_message_thumbs;
+    width: $size_message_thumbs
+  }
+  .main {
+    flex:1
+  }
+  .content{
+    margin-top: -0.2em;
+    font-size: $font-size-md;
+    white-space: normal;
+    word-break: break-word;
+  }
+  .time{
+    color:$color-akima;
+    margin: .5em 0;
+    font-size: .8rem;
+  }
+  .message-list-main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .message-list-extra {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-end;
+  }
+
+  .m-button {
+    padding-left: $space-side;
+    padding-right: $space-side;
+  }
+}

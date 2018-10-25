@@ -1,0 +1,88 @@
+{
+  "name": "mob-v",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:entries": "node initEntry.js",
+    "build:pack-utils": "node packUtils.js",
+    "package": "npm run build:entries && node build.js && node packUtils.js",
+    "gen:icons": "node src/icons-src/generate",
+    "dist": "rollup -c",
+    "pub": "npm run package &&npm run build:pack-utils && cd package && npm publish",
+    "link": "npm run package &&npm run build:pack-utils && cd package && yarn link",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit",
+    "debug":"npm run build:entries && node build.js --watch && node packUtils.js"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "alloyfinger": "^0.1.15",
+    "es-treasure": "^1.0.3",
+    "scriptjs": "^2.5.8",
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-plugin-unit-mocha": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-airbnb": "^3.0.5",
+    "@vue/test-utils": "^1.0.0-beta.25",
+    "chai": "^4.1.2",
+    "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-smushit": "^1.2.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "postcss-loader": "^2.1.5",
+    "rimraf": "^2.6.2",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-jsx": "^1.0.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-postcss": "^1.6.2",
+    "rollup-plugin-scss": "^0.4.0",
+    "rollup-plugin-terser": "^1.0.1",
+    "rollup-plugin-uglify": "^4.0.0",
+    "rollup-plugin-vue": "^4.2.0",
+    "sass-loader": "^7.0.2",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "url-loader": "^1.0.1",
+    "vue-loader": "^15.2.4",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.16",
+    "vuex": "^3.0.1",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^3.0.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/airbnb"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

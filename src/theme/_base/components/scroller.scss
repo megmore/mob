@@ -1,0 +1,136 @@
+
+$size_refresher_android: dp(80);
+$size_refresher_android_half: dp(40);
+$size_refresher_ios: dp(50);
+$size_refresher_ios_half: dp(25);
+$size_refresher_icon: dp(40);
+$size_refresher_icon_half: dp(20);
+
+$size-scroller_m-loader: 2rem;
+$size-scroller_m-border-loader: .2rem;
+.m-scroller {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &.android-scroller {
+    .m-scroller-wrapper {
+      position: static;
+      -webkit-overflow-scrolling: touch;
+      will-change: scroll-position;
+      contain: size style layout;
+      overflow-x:hidden;
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+    }
+    .m-refresher {
+      height: $size_refresher_android;
+      width: $size_refresher_android;
+      left: calc(50% - #{$size_refresher_android_half});
+      top: -$size_refresher_android;
+
+      &.rolling {
+        transition: all .2s ease;
+        animation: spin .6s 0s infinite linear;
+        z-index: 200;
+      }
+      &.pulling {
+        z-index: 200;
+      }
+      &.start {
+        transition: all .2s ease;
+      }
+      &.finish {
+        transition: all .2s ease;
+      }
+
+      .fa-icon {
+        display: block;
+        margin: $size_refresher_icon_half auto;
+        height:$size_refresher_icon;
+        width: $size_refresher_icon;
+      }
+    }
+  }
+  &.ios-scroller {
+    .m-refresher {
+      left: calc(50% - #{$size_refresher_ios_half});
+      top: dp(70);
+      position: absolute;
+      z-index: 10;
+    }
+
+    .m-scroller-wrapper {
+      -webkit-overflow-scrolling: touch;
+      will-change: scroll-position;
+      contain: size style layout;
+      overflow-x:hidden;
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      position: relative;
+
+      &.rolling {
+        will-change: transform;
+        transition: all .2s ease;
+      }
+      &.start {
+        will-change: transform;
+        transition: all .2s ease;
+      }
+      &.finish {
+        will-change: transform;
+        transition: all .2s ease;
+      }
+    }
+  }
+
+  &.is-refresh {
+    overflow: hidden
+  }
+  &.no-refresh {
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    contain: size style layout;
+    overflow-x:hidden;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  .m-refresher {
+    will-change: transform;
+    z-index:10;
+    position: absolute;
+    border-radius: 50%;
+    &.rolling {
+      transition: all .2s ease;
+      animation: spin .6s 0s infinite linear;
+    }
+    &.start {
+      transition: all .2s ease;
+    }
+    &.finish {
+      transition: all .2s ease;
+    }
+  }
+
+  .m-scroller--more-status {
+    text-align: center;
+    font-size:14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: dp(90);
+  }
+}
+
+.scroller {
+  -webkit-overflow-scrolling: touch;
+  will-change: scroll-position;
+  contain: size style layout;
+  overflow-x:hidden;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}

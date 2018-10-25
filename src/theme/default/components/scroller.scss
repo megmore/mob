@@ -1,0 +1,10 @@
+.m-scroller {
+  &.ios-scroller {
+    .m-refresher {
+      @include loader-default(dark, $size-scroller_m-loader, $size-scroller_m-border-loader);
+    }
+  }
+  .m-loader{
+    @include loader-default(dark, $size-scroller_m-loader, $size-scroller_m-border-loader);
+  }
+}

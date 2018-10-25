@@ -1,0 +1,47 @@
+$size_m_list_item: dp(25) $space-side;
+$space_m_list_item_inner: dp(20);
+.comment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+  padding: $size_m_list_item;
+  &:first-child{
+    padding-top: 0;
+  }
+  .comment-avatar {
+    @include ltl {
+      margin-right: $space_m_list_item_inner;
+    }
+    @include rtl {
+      margin-left: $space_m_list_item_inner;
+    }
+  }
+  .comment-main {
+    font-size: .8rem;
+    .comment-author {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .comment-time {
+      @include ltl {
+        float: right;
+      }
+      @include rtl {
+        float: left;
+      }
+      font-size: .8rem;
+      color: $color-akima;
+    }
+
+    @include flex(1);
+    padding-top: dp(4);
+  }
+  .comment-content {
+    padding: dp(8) 0;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+  }
+  @include list-item()
+}

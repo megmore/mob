@@ -1,0 +1,95 @@
+@import "./variables/palettes";
+@import "./variables/elevations";
+@import "./functions";
+$assetsPath:'./assets/';
+//通用主题变量
+$color-theme-night--divider: #0D0C0A;
+
+
+$c-stoneGray: #7f7f7f;
+$c-content: #4a1f0f;
+$c-dayima: #c11700;
+$c-text: #2e2e2e;
+$c-skin: #d2c09e;
+$c-shit: #ab9c5e;
+$c-spark: #89612f;
+$c-handler: #896c51;
+$c-danger: #FF442B;
+$c-warning: #fb8f0e;
+$c-success: #0fae09;
+$c-info: #329fff;
+
+
+$color-primary: #141926;
+$color-danger: #FF442B;
+$color-warning: #fb8f0e;
+$color-success: #0fae09;
+$color-info: #329fff;
+$color-dust: #FFFCF3;
+$color-dark: #000000;
+$color-akima: #949494;
+$color-kimula: #F7F7F7;
+$color-bomula: #dedede;
+$color-yesterday: #E9EBEC;
+$color-shabina:#E1E1E1;
+$color-darksteel: #9F925F;
+$color-skin: #d2c09e;
+$color-sleep: #F5FAFE;
+$color-younglady: #FF9A9A;
+$color-youngboy: #82CEF3;
+$color-spring: #73DCBF;
+$color-redbone: #FD5D48;
+
+$font-size-sm: 0.5rem;
+$font-size-smx: 0.6rem;
+$font-size-smxx: 0.7rem;
+$font-size-smxxx: 0.8rem;
+$font-size-smxxxx: 0.9rem;
+$font-size-md: 1rem;
+$font-size-mdx: 1.1rem;
+$font-size-mdxx: 1.2rem;
+$font-size-mdxxx: 1.3rem;
+$font-size-mdxxxx: 1.4rem;
+$font-size-lg: 1.5rem;
+$font-size-lgx: 1.6rem;
+$font-size-lgxx: 1.7rem;
+$font-size-lgxxx: 1.8rem;
+$font-size-lgxxxx: 1.9rem;
+$font-family-main-text: Roboto-Regular;
+
+//间距
+$--Space: (
+        clear: 0px !important,
+        xs: .2rem,
+        sm: .5rem,
+        md: 1.2rem,
+        lg: 2rem,
+        xl: 6rem
+);
+
+//默认文字大小
+$fs-content: 14px;
+//头部刘海尺寸
+$size-fix-hair: 33px;
+//两边间距
+$space-side: 1.2rem;
+//上下间距
+$space-updown: 1.4rem;
+//头部导航尺寸
+$size-header: 50px;
+//底部导航尺寸
+$size-footer: 50px;
+//图片按钮比例
+$ratio-button-image: 18/15;
+
+
+
+
+
+//头部导航尺寸
+$--size-header: 50px;
+$--zIndex-header: 101;
+//底部导航尺寸
+$--size-footer: 50px;
+
+

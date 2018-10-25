@@ -1,0 +1,113 @@
+$size_input_md: 2.7rem;
+$size_input_icon_md: 1.2rem;
+$fontSize_input_md: $font-size-smxxx;
+.m-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  border: 1px solid $color-bomula;
+  border-radius: .1rem;
+  .m-input-pre-icon {
+    border: 0 !important;
+    user-select: none !important;
+    -webkit-appearance:none !important;
+    appearance:none !important;
+  }
+  .search--button-clear {
+    border: 0 !important;
+    user-select: none !important;
+    -webkit-appearance:none !important;
+    appearance:none !important;
+  }
+  .m-input--textarea {
+    width: 100%;
+  }
+  .m-input--textarea-inner {
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  input {
+    @include flex(1);
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+  textarea {
+    -webkit-appearance: none;
+    border: none;
+    resize: none;
+    outline: none;
+    padding: dp(20) 0;
+    font-size: $font-size-md;
+    width: 100%;
+  }
+
+  //皮肤
+  &.primary {
+    background-color: $color-kimula;
+    textarea,
+    input {
+      color:black;
+    }
+    ::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color-akima;
+    }
+    border: 1px solid $color-darksteel;
+  }
+  &.pure {
+    background-color: $color-kimula;
+    textarea,
+    input {
+      color:black;
+    }
+    ::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color-akima;
+    }
+    border: 1px solid $color-yesterday;
+  }
+  &.seal {
+    background-color: $color-kimula;
+    textarea,
+    input {
+      color:black;
+    }
+    ::-webkit-input-placeholder { /* WebKit browsers */
+      color: $color-akima;
+    }
+    //border: none;
+    border: 1px solid #afafaf;
+  }
+
+  &.md {
+    font-size: $font-size-md;
+    min-height: $size_input_md;
+    padding: 0 .8rem;
+  }
+
+
+  .m-input-pre-icon {
+    height: $size_input_icon_md;
+    width: $size_input_icon_md;
+    min-width: $size_input_icon_md;
+    min-height: $size_input_icon_md;
+    border: 0 !important;
+    user-select: none !important;
+    -webkit-appearance:none !important;
+    appearance:none !important;
+  }
+  .search--button-clear {
+    height: $size_input_icon_md;
+    width: $size_input_icon_md;
+    min-width: $size_input_icon_md;
+    min-height: $size_input_icon_md;
+    border: 0 !important;
+    user-select: none !important;
+    -webkit-appearance:none !important;
+    appearance:none !important;
+  }
+}

@@ -1,0 +1,14 @@
+.m-image {
+  display: block;
+  width: 100%;
+  @include bg-image('onemt_image_holder.png', 10% auto);
+  background-color: #a3a3a3;
+  overflow: hidden;
+  img {
+    display: block;
+  }
+  &.rendered {
+    background-size: cover;
+    background-color: transparent;
+  }
+}

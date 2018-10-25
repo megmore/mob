@@ -1,0 +1,6 @@
+@mixin landscope(){
+  @at-root [landscope] &{
+    @content
+  }
+}
+

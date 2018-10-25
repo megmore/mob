@@ -1,0 +1,23 @@
+//vue过渡动画
+
+//fade
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s ease;
+}
+.fade-enter, .fade-leave-active {
+   opacity: 0;
+ }
+
+.m-fade-enter {
+    opacity: 0
+}
+.m-fade-enter-active, .m-fade-leave-active {
+    transition: opacity .4s
+}
+.m-fade-leave-active {
+    opacity: 0;
+}
+
+.m-transition-ease {
+  transition: all .3s ease;
+}

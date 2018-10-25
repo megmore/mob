@@ -1,0 +1,6 @@
+@mixin game-spec($game: ROK){
+  @at-root [game="#{$game}"] &{
+    @content
+  }
+}
+

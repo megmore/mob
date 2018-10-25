@@ -1,0 +1,31 @@
+.m-list--item {
+  @include list-item();
+  .m-list-body {
+    &:active {
+      background: $color-sleep;
+    }
+    .m-list--main {
+      color:$color-dark;
+    }
+
+    .notice {
+      color:$color-akima;
+      &.danger {
+        color: $c-danger;
+        &:before {
+          background-color: $c-danger;
+        }
+      }
+    }
+    .info {
+      color:$color-akima;
+    }
+    .arrow {
+      background-image: url('#{$assetsPath}onemt_arrow_right.png');
+    }
+    .time {
+      color: $c-stoneGray;
+    }
+  }
+
+}

@@ -1,0 +1,14 @@
+.form-preview-item {
+    height: auto;
+    font-size: $font-size-md;
+    .form-preview-item--title {
+        font-size: $font-size-md;
+        padding: $space-side /2 $space-side;
+    }
+    .form-preview-item--content {
+        font-size: $font-size-md;
+        padding: $space-side /2 $space-side;
+        background-color: $color-kimula;
+        border: 1px solid #afafaf;
+    }
+}

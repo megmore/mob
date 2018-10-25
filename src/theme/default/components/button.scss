@@ -1,0 +1,198 @@
+// md
+$height-btn_md: 2.5rem;
+$space-side-btn_md: 4.5rem;
+$size-btn-loader_md: 1.5rem;
+$size-btn-loader-border_md: .2rem;
+.m-button {
+  user-select: none;
+  cursor: pointer;
+  border-radius: .2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   @include ellipsis(1);
+  transition: all .3s ease ;
+  //尺寸
+  &.md {
+    height: $height-btn_md;
+    padding:0 $space-side-btn_md;
+    font-size: $font-size-md;
+
+    .m-loader {
+      @include loader-default(white, $size-btn-loader_md, $size-btn-loader-border_md)
+    }
+  }
+
+  //皮肤
+  &.primary {
+    font-family: Roboto-regular;
+    box-sizing: border-box;
+    color: $color-sleep;
+    * {
+      color: inherit;
+    }
+    background-image: linear-gradient( to right,  rgb(54,201,255) 0%, rgb(84,180,255) 100%);
+    &:active,
+    &.active {
+      background-image: linear-gradient( to right,  rgb(57, 181, 238) 0%, rgb(78, 160, 232) 100%);
+    }
+    &:disabled {
+      background-image: linear-gradient( to right,  rgb(57, 181, 238) 0%, rgb(78, 160, 232) 100%);
+    }
+  }
+  &.default {
+    font-family: Roboto-regular;
+    color: $color-akima;
+    box-sizing: border-box;
+    border: .05rem solid $color-akima;
+    * {
+      color: inherit;
+    }
+    &:active,
+    &.active {
+      background-color: rgba(0,0,0,.1) ;
+    }
+    &:disabled {
+      background-color: rgba(0,0,0,.1) ;
+    }
+  }
+  &.clean {
+    font-family: Roboto-regular;
+    box-sizing: border-box;
+    //background-color: white;
+    color: $color-info;
+    * {
+      color: inherit;
+    }
+    &:active,
+    &.active {
+      color: lighten($color-info, 20%);
+    }
+    &:disabled {
+      color: rgba(0,0,0,.07) ;
+    }
+  }
+  &.pure {
+    font-family: Roboto-regular;
+    box-sizing: border-box;
+    border: .05rem solid lighten($color-akima,20%);
+    background-color: white;
+    color: black;
+    * {
+      color: inherit;
+    }
+    &:active,
+    &.active {
+      background-color: rgba(0,0,0,.07) ;
+    }
+    &:disabled {
+      background-color: rgba(0,0,0,.07) ;
+    }
+  }
+
+  @mixin spacial-button($reverse: false){
+    &.pending {
+      .m-loader {
+        @if($reverse){
+          @include loader-default(white, $size-btn-loader_md, $size-btn-loader-border_md)
+        }
+        @else{
+          @include loader-default(dark, $size-btn-loader_md, $size-btn-loader-border_md)
+        }
+      }
+      background-image: none;
+      &:after {
+        background-image: none;
+      }
+    }
+  }
+  // 特殊按钮
+
+  &.send {
+    @include spacial-button();
+    @include button-image(
+      $size-footer,
+      $size-footer * $ratio-button-image,
+      'onemt_btn_send.png',
+      'onemt_btn_send_active.png'
+    );
+  }
+  &.send-reverse {
+    @include spacial-button(true);
+    @include button-image(
+        $size-footer,
+        $size-footer * $ratio-button-image,
+        'onemt_btn_send_active.png',
+        'onemt_btn_send.png'
+    );
+  }
+  &.follow {
+    @include spacial-button();
+    @include button-image(
+                    $size-footer,
+                    $size-footer * $ratio-button-image,
+                    'onemt_btn_follow_active.png',
+                    'onemt_btn_follow.png',
+                    100% 100%,
+                    'onemt_btn_follow_complete.png'
+    );
+  }
+  &.edit {
+    @include spacial-button();
+    @include button-image(
+        $size-footer,
+        $size-footer * $ratio-button-image,
+        'onemt_btn_edit.png',
+        'onemt_btn_edit_active.png'
+    );
+  }
+  &.edit-reverse {
+    @include spacial-button();
+    @include button-image(
+        $size-footer,
+        $size-footer * $ratio-button-image,
+        'onemt_btn_edit_active.png',
+        'onemt_btn_edit.png'
+    );
+  }
+  &.btn-close {
+    @include spacial-button();
+    @include button-image(
+                    $size-footer,
+                    $size-footer * $ratio-button-image,
+                    'onemt_btn_close.png',
+                    'onemt_btn_close_active.png'
+    );
+  }
+
+  &.FAQ {
+    @include spacial-button();
+    @include button-image(
+        $size-footer,
+        $size-footer * $ratio-button-image,
+        'onemt_icon_faq.png',
+        'onemt_icon_faq_active.png'
+    );
+  }
+
+  &.thumb {
+    @include spacial-button();
+    @include button-image(
+        $size-footer,
+        $size-footer,
+        'onemt_icon_thumb_active.png',
+        'onemt_icon_thumb.png'
+    );
+  }
+
+
+  &.more {
+    @include button-image(
+        1.9rem,
+        1.9rem,
+        'onemt_icon_more.png',
+        'onemt_icon_more_active.png',
+        80%
+    );
+  }
+}

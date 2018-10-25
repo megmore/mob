@@ -1,0 +1,60 @@
+$size-m-action-sheet-item-icon: 1.8rem;
+
+.m-action-sheet-item {
+  user-select: none;
+  padding:1rem $space-side;
+  font-size: $font-size-md;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  @include list-item();
+
+  //预设
+  $height-m-action-sheet-item-share: 3.93rem;
+  @mixin preset-share() {
+    height: $height-m-action-sheet-item-share;
+    font-size: $font-size-md;
+    justify-content: flex-start;
+
+    .icon {
+      @include ltl {
+        margin-left: 35%;
+        margin-right: 1rem;
+      }
+      @include rtl {
+        margin-right: 35%;
+        margin-left: 1rem;
+      }
+      height: $size-m-action-sheet-item-icon;
+      width: $size-m-action-sheet-item-icon;
+      border-radius: .2rem;
+    }
+  }
+
+  &.facebook {
+    @include preset-share();
+    .icon {
+      @include bg-image('onemt_share_facebook.png');
+    }
+  }
+  &.whatsapp {
+    @include preset-share();
+    .icon {
+      @include bg-image('onemt_share_whatsapp.png');
+    }
+  }
+  &.twitter {
+    @include preset-share();
+    .icon {
+      @include bg-image('onemt_share_twitter.png');
+    }
+  }
+  &.instagram {
+    @include preset-share();
+    .icon {
+      @include bg-image('onemt_share_instagram.png');
+    }
+  }
+}

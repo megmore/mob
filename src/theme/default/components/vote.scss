@@ -1,0 +1,70 @@
+
+$height-vote-item: 2.36rem;
+$size_vote-icon: 1.2rem;
+.m-vote {
+  margin-bottom: .8rem;
+  &.is-voted {
+    .progress-bar {
+      background-color: lighten($color-akima, 20%);
+    }
+  }
+}
+.m-vote-item {
+  background-color: $color-yesterday;
+  margin: 0.2rem 0;
+  min-height: $height-vote-item;
+  width: 100%;
+  position: relative;
+  &.selected {
+    .progress-bar {
+      background-color: $color-younglady;
+    }
+  }
+  .m-vote-item--selection {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $space-side / 1.2;
+    min-height: $height-vote-item;
+    height: 100%;
+    .selection-name {
+      word-break: break-all;
+      padding: $space-side / 2 $space-side / 2 $space-side / 2 0;
+      //@include ellipsis(1)
+    }
+    .selection-count {
+      width: 6rem;
+      font-weight: normal;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      .m-button {
+        height:$size_vote-icon;
+        width:$size_vote-icon;
+      }
+      font-size: $font-size-smxx;
+    }
+
+  }
+  .progress-bar {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    transition: width  .5s ease-in-out;
+    background-color: transparent;
+    @include ltl {
+      left: 0;
+    }
+    @include rtl {
+      right: 0;
+    }
+  }
+
+
+}

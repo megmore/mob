@@ -1,0 +1,31 @@
+
+.m-chat-room {
+  .chat-item {
+    &.item-me {
+      .item-body {
+        .item-content-box {
+          &:after {
+            @include bg-image('onemt_chat_me_site.png');
+          }
+        }
+      }
+    }
+    &.item-other {
+      .item-body {
+        .item-content-box {
+          &:before {
+            @include bg-image('onemt_chat_other_site.png');
+          }
+        }
+      }
+    }
+    .item-content-link {
+      &:after {
+        background-image: url('#{$assetsPath}onemt_arrow_right.png');
+      }
+    }
+    .arrow {
+      background-image: url('#{$assetsPath}onemt_arrow_right.png');
+    }
+  }
+}

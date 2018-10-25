@@ -1,0 +1,15 @@
+// 分割线
+%m-divider--card{
+  width: 100%;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArAAAAASCAMAAACU0R1IAAAAQlBMVEUAAAAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyAvJyDUoefaAAAAFnRSTlMAgAR9FHZBcHokG0tcVEY+M2tkYTAOg1URUgAAAS5JREFUaN7t2ctqwzAQheEzut9tx877v2ojCDGtay9aMFqcbye0/REjBkREdIvkQwbRMHLwEaeU9atsIBrEJqu3CmeMzFUaiAbRpM5iLl7YaVoSiAaRFjdZdXKXSy32+TnPM4judWzvaUstOeEgauk+I64JwYDoTsf2opdOR+yybgCWnJRKLYi2wQN45PwA0d329nywWkLrXeYFQNMZnZYAmHfCScubc0L0D1r+am9PJ6CLpoeq0bXgALU4A5jJyosHMIlMILrb3p6XFzv1Lt2iABfa9xlW6z7DKkDhxTkQ3W5vr5cYvfQudcRBqo9SLD9aNBRjS3nUhF8p7+aVydIwzDo5f7Xp2rjpooE0qdvlpmspwn0BDWOWsliFU9FKVSAahKpiI64wVxrKzyC/AB2iCrd8Mn98AAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-size: 94% 100%;
+  background-position: center;
+  height: .5rem;
+}
+%m-divider--night{
+  display: block;
+  width: 100%;
+  background-color: $color-theme-night--divider;
+  height: .5rem;
+}

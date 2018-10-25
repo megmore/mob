@@ -1,0 +1,65 @@
+@import "variables";
+
+@font-face {
+  font-family: 'sdk';
+  src:  url('#{$icomoon-font-path}/sdk.eot?6pfz4s');
+  src:  url('#{$icomoon-font-path}/sdk.eot?6pfz4s#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/sdk.ttf?6pfz4s') format('truetype'),
+    url('#{$icomoon-font-path}/sdk.woff?6pfz4s') format('woff'),
+    url('#{$icomoon-font-path}/sdk.svg?6pfz4s#sdk') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sdk-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sdk' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sdk-icon-home {
+  &:before {
+    content: $sdk-icon-home;     
+    color: #ff9c00;
+  }
+}
+.sdk-icon-label-ADMIN {
+  &:before {
+    content: $sdk-icon-label-ADMIN;     
+    color: #ff9c00;
+  }
+}
+.sdk-icon-label-GM {
+  &:before {
+    content: $sdk-icon-label-GM;     
+    color: #ff9c00;
+  }
+}
+.sdk-icon-label-MOD {
+  &:before {
+    content: $sdk-icon-label-MOD;     
+    color: #ff9c00;
+  }
+}
+.sdk-icon-label-NEW {
+  &:before {
+    content: $sdk-icon-label-NEW;     
+    color: #ff9c00;
+  }
+}
+.sdk-icon-label-VETERAN {
+  &:before {
+    content: $sdk-icon-label-VETERAN;     
+    color: #ff9c00;
+  }
+}
+

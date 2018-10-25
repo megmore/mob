@@ -1,0 +1,87 @@
+html,
+body,
+#app {
+height: 100%;
+width: 100%;
+overflow: hidden;
+padding: 0;
+margin: 0;
+}
+html, * {
+    font-family: 'Roboto-Regular', Roboto-Regular, sans-serif, "Microsoft YaHei";
+    //color: #000000;
+}
+body {
+    &:before {
+        display: block;
+        content: ' ';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        height: $size-header;
+        width: 100%;
+    }
+    &.is-iphoneX {
+        padding-top: $size-fix-hair;
+    }
+}
+#app{
+    position: relative;
+}
+
+.view {
+    position: absolute !important;
+    transition: all .3s ease;
+    will-change: transform;
+    opacity:1;
+    box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.forward-enter,
+.back-leave-active {
+    will-change: transform;
+    @include ltl {
+        transform: translate3d(100%, 0, 0);
+    }
+    @include rtl {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.back-enter,
+.forward-leave-active {
+    box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
+    will-change: transform;
+    @include ltl {
+        transform: translate3d(-10%, 0, 0);
+    }
+    @include rtl {
+        transform: translate3d(10%, 0, 0);
+    }
+}
+
+.opacity-forward-enter,
+.opacity-back-leave-active {
+    will-change: transform;
+    transform: translate3d(0, 5%, 0);
+    opacity:0;
+}
+
+.m-icon {
+    &.m-icon--NEW,
+    &.m-icon--ADMIN,
+    &.m-icon--GM,
+    &.m-icon--MOD,
+    &.m-icon--VETERAN {
+        > *:first-child{
+            color: red !important;
+        }
+        > *:not(:first-child){
+            color: white !important;
+        }
+    }
+}
+
+
+
